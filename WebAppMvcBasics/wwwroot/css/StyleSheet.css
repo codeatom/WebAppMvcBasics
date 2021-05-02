@@ -1,0 +1,45 @@
+﻿body {
+    width: 1024px;
+    font-family: sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    display: grid;
+    grid-gap: 1px;
+    background-color: #ffffff;
+    grid-template-columns: repeat(5, [col] auto);
+    grid-template-rows: repeat(3, [row] auto);
+}
+
+.group {
+    background-color: #466d6d;
+    color: #d1d1e0;
+    padding: 20px;
+}
+
+.site-name {
+    grid-column: col 1;
+    grid-row: row 1;
+}
+
+.nav-list {
+    grid-column: col 2 / span 4;
+    grid-row: row 1;
+}
+
+.article {
+    grid-column: col / span 5;
+    grid-row: row 2;
+}
+
+.footer {
+    grid-column: col / span 5;
+    grid-row: row 3;
+}
+
+.list li {
+    display: inline;
+    padding: 30px;
+}

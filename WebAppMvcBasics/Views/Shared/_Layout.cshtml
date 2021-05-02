@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="group site-name">
+            <h1>Logo</h1>
+        </div>
+
+        <nav class="group nav-list">
+            <ul class="list">
+                <li>@Html.ActionLink("Index", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Projects", "Projects", "Home")</li>
+                <li>@Html.ActionLink("Contact us", "Contact", "Home")</li>
+            </ul>
+        </nav>
+
+        <div class="group article">
+            @RenderBody()
+        </div>
+
+        <footer class="group footer"><p><span style="font-style:italic">&copy; Christopher Ojaide @DateTime.Now.ToShortDateString()</span></p></footer>
+    </div>
+</body>
+</html>
